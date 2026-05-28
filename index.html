@@ -1,5 +1,246 @@
-<!doctype html>
-<meta charset="utf-8">
-<title>自己紹介</title>
-<h1>自己紹介</h1>
-<p>授業で作成したページです。</p>
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --accent-color: #4a90e2;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --accent-color: #6ba4e8;
+                --card-bg: #1e1e1e;
+                --border-color: #333333;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 5rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            word-wrap: break-word;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--border-color);
+            color: var(--text-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .interactive-box {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <div class="card">
+                <h1>Me</h1>
+                <p style="text-align: center; opacity: 0.8; font-size: 0.9rem;">情報工学専攻 / 大学生</p>
+                <p>大学で情報工学を学びながら、趣味でデジタルイラストの作成や、ゲームUI・アプリケーションの構造に関心を持って活動しています。技術的な探求と、視覚的な表現の融合を模索しています。</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="card">
+                <p><strong>Programming & Tools</strong></p>
+                <div class="tag-container">
+                    <span class="tag">C / C++</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">CLIP STUDIO PAINT</span>
+                </div>
+            </div>
+            <div class="card">
+                <p><strong>Interests</strong></p>
+                <div class="tag-container">
+                    <span class="tag">UI/UX Design</span>
+                    <span class="tag">Game Audio</span>
+                    <span class="tag">Digital Illustration</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="works">
+            <h2>Works</h2>
+            <div class="card">
+                <h3>特にない</h3>
+                <p>今はまだない</p>
+                <div class="tag-container">
+                </div>
+            </div>
+        </section>
+
+        <section id="reflection">
+            <h2>Reflection</h2>
+            <div class="card">
+                <p>情報工学の基礎的な理論を学ぶと同時に、それを実際のインターフェースや自己表現にどう落とし込むかを常に考えています。現在は、より高度なシステム設計や、ユーザーが触れていて心地よいと感じるソフトウェアの構築に向けて、学習を深めています。</p>
+                <div class="interactive-box">
+                    <button id="quoteBtn">Click for a Thought</button>
+                    <p id="quoteDisplay" style="margin-top: 1rem; font-style: italic; min-height: 24px;"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 . All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quotes = [
+                "test"
+            ];
+
+            const btn = document.getElementById('quoteBtn');
+            const display = document.getElementById('quoteDisplay');
+
+            btn.addEventListener('click', () => {
+                const currentIndex = quotes.indexOf(display.textContent);
+                let nextIndex;
+                
+                do {
+                    nextIndex = Math.floor(Math.random() * quotes.length);
+                } while (nextIndex === currentIndex && quotes.length > 1);
+
+                display.textContent = quotes[nextIndex];
+            });
+        });
+    </script>
+</body>
+</html>
+
+```
