@@ -206,7 +206,7 @@
         <section id="reflection">
             <h2>Reflection</h2>
             <div class="card">
-                <p>情報工学の基礎的な理論を学ぶと同時に、それを実際のインターフェースや自己表現にどう落とし込むかを常に考えています。現在は、より高度なシステム設計や、ユーザーが触れていて心地よいと感じるソフトウェアの構築に向けて、学習を深めています。</p>
+                <p>情報工学の基礎的な理論を学びつつ，最近はその応用としてサークルでの活動に注力しています。サークルの皆でゲームやアプリケーションを作りながら，文化祭やコミックマーケットへの出展を目指しています。この活動を通して、チームでの開発やプロジェクト管理の経験を積んでいます。将来は、これらの経験を活かして、ユーザーに新しい体験を提供するプロダクト開発に携わりたいと考えています。</p>
                 <div class="interactive-box">
                     <button id="quoteBtn">Click for a Thought</button>
                     <p id="quoteDisplay" style="margin-top: 1rem; font-style: italic; min-height: 24px;"></p>
@@ -219,27 +219,6 @@
         <p>&copy; 2026 . All rights reserved.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const quotes = [
-                "test"
-            ];
-
-            const btn = document.getElementById('quoteBtn');
-            const display = document.getElementById('quoteDisplay');
-
-            btn.addEventListener('click', () => {
-                const currentIndex = quotes.indexOf(display.textContent);
-                let nextIndex;
-                
-                do {
-                    nextIndex = Math.floor(Math.random() * quotes.length);
-                } while (nextIndex === currentIndex && quotes.length > 1);
-
-                display.textContent = quotes[nextIndex];
-            });
-        });
-    </script>
 </body>
 </html>
 
